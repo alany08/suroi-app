@@ -4,7 +4,8 @@
   "description": "Minimal app for https://suroi.io",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "repository": "https://github.com/alany08/suroi-app",
   "keywords": [
@@ -16,5 +17,16 @@
   "devDependencies": {
     "electron": "^34.0.2",
     "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.alany08.suroi-app",
+    "icon": "images/suroi_favicon_256x256.png",
+    "directories": {
+      "buildResources": "resources"
+    },
+    "extraFiles": [
+      "credentials"
+    ],
+    "publish": null
   }
 }

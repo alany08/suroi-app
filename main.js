@@ -3,12 +3,6 @@ const { app, BrowserWindow, session, protocol } = require('electron');
 const path = require('node:path');
 
 function createWindow () {
-  protocol.interceptFileProtocol('file', (request, callback) => {
-    const url = request.url.substring(7); // Remove 'file://' prefix
-    const rootPath = path.join(__dirname, 'client'); // Treat 'client/' as root
-    const filePath = path.join(rootPath, url === '/' ? 'index.html' : url);
-    callback({ path: filePath });
-  });
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -17,15 +11,24 @@ function createWindow () {
     autoHideMenuBar: true
   })
 
-  mainWindow.loadURL(`file:///index.html`);
+  mainWindow.loadURL(`https://suroi.io`);
+
+  mainWindow.webContents.on('will-prevent-unload', (event) => {
+    event.preventDefault();
+  });
+
+  return mainWindow;
 }
 
 app.whenReady().then(() => {
-  createWindow()
+  var win = createWindow()
 
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
+
+  app.on('ready-to-show', () => { 
+  })
 });
 
 app.on('window-all-closed', function () {
