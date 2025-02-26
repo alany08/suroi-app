@@ -1,12 +1,12 @@
 {
-  "name": "suroihax-app",
+  "name": "Suroi",
   "version": "0.0.1",
-  "description": "Minimal app for https://suroihax.glitch.me",
+  "description": "Minimal app for https://suroi.io",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/alany08/suroihax-app",
+  "repository": "https://github.com/alany08/suroi-app",
   "keywords": [
     "suroi",
     "electron"
