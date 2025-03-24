@@ -1,4 +1,4 @@
-# SuroiHax
+# Suroi App
 
 Please check the releases tab for compiled binaries to run on your computer.
 
@@ -8,7 +8,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/alany08/suroihax-app
+git clone https://github.com/alany08/suroi-app
 # Go into the repository
 cd suroihax-app
 # Install dependencies
