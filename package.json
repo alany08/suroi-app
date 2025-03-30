@@ -20,7 +20,7 @@
   },
   "build": {
     "appId": "com.alany08.suroi-app",
-    "icon": "images/suroi_favicon_256x256.png",
+    "icon": "images/suroi_favicon_512x512.png",
     "directories": {
       "buildResources": "resources"
     },

@@ -37,8 +37,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           path: |
-            dist/suroihax-app*.AppImage
-            dist/suroihax-app*.exe
-            dist/suroihax-app*.dmg
+            dist/Suroi*.AppImage
+            dist/Suroi*.exe
+            dist/Suroi*.dmg
           retention-days: 90
           name: ${{ github.event.repository.name }}-${{ matrix.os }}
