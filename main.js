@@ -11,6 +11,11 @@ function createWindow () {
     autoHideMenuBar: true
   })
 
+  session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
+    details.requestHeaders['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.6834.159 Safari/537.36';
+    callback({ cancel: false, requestHeaders: details.requestHeaders });
+  });
+
   mainWindow.loadURL(`https://suroi.io`);
 
   mainWindow.webContents.on('will-prevent-unload', (event) => {
